@@ -1,0 +1,38 @@
+[package]
+name = "grahf-hao"
+version = "0.1.0"
+edition = "2021"
+autobins = false
+description = "Horizontal alignment optimization benchmark using GRAHF."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+keywords = ["heuristic", "metaheuristic", "optimization"]
+categories = ["science", "algorithms"]
+
+[dependencies]
+grahf = { path = "../." }
+mahf = "0.1.0"
+irace-rs = { git = "https://github.com/Saethox/irace-rs" }
+better_any = "0.2"
+clap = { version = "4.5", features = ["derive"] }
+color-eyre = "0.6.2"
+dyn-clone = "1.0.13"
+eyre = "0.6.8"
+itertools = "0.11.0"
+log = "0.4.18"
+ndarray = "0.15"
+ndarray-npy = "0.8"
+num_cpus = "1.16"
+pretty_env_logger = "0.5.0"
+rayon = "1.7.0"
+serde = { version = "1.0.163", features = ["derive"] }
+serde_json = "1.0.107"
+toml = "1"
+trait-set = "0.3.0"
+
+[dev-dependencies]
+tempfile = "3"
+
+[[bin]]
+name = "hm-ibf-hao"
+path = "src/main.rs"

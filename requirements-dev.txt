@@ -1,0 +1,10 @@
+# Python environment for the HM-IBF-HAO scripts and the verification gate.
+# Installed into /opt/venv by the `dev` stage of the Dockerfile.
+
+# Runtime dependencies of preprocessing/.
+numpy>=1.26,<3
+scipy>=1.11,<2
+
+# Lint, format and test tooling.
+ruff>=0.6,<1
+pytest>=8,<9

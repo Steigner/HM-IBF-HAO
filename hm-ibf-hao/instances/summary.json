@@ -1,0 +1,18 @@
+{
+  "instances": [
+    "austria_eps1.0",
+    "italia_eps1.0",
+    "slovenia_eps1.0"
+  ],
+  "backbone_lengths": {
+    "austria_eps1.0": 463.7127701597095,
+    "italia_eps1.0": 378.70057685088926,
+    "slovenia_eps1.0": 435.39906166072467
+  },
+  "natural_dimensions": {
+    "austria_eps1.0": 68,
+    "italia_eps1.0": 53,
+    "slovenia_eps1.0": 60
+  },
+  "total_instances": 3
+}

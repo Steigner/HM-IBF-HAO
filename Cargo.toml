@@ -1,0 +1,44 @@
+[package]
+name = "grahf"
+version = "0.1.0"
+edition = "2021"
+description = "A hyper-heuristic framework for designing heterogeneous island model metaheuristics."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+keywords = ["heuristic", "metaheuristic", "optimization"]
+categories = ["science", "algorithms"]
+
+[dependencies]
+mahf = "0.1.0"
+irace-rs = { git = "https://github.com/Saethox/irace-rs" }
+petgraph = { version = "0.6.3", features = ["serde-1"] }
+better_any = { version = "0.2.0", features = ["derive"] }
+eyre = "0.6.8"
+trait-set = "0.3.0"
+serde = { version = "1.0.160", features = ["derive"] }
+erased-serde = "0.3.25"
+ron = "0.8.0"
+derive_more = { version = "0.99.17", features = ["deref", "deref_mut", "add", "mul", "not"] }
+rand = "0.8.5"
+rand_chacha = "0.3.1"
+rand_distr = "0.4.3"
+dyn-clone = "1.0.13"
+derivative = "2.2.0"
+rayon = "1.7.0"
+itertools = "0.11.0"
+indicatif = { version = "0.17.4", features = ["rayon"] }
+typed-builder = "0.16.0"
+log = "0.4.18"
+pretty_env_logger = "0.5.0"
+indexmap = "2.0.0"
+splines = "4.4.2"
+num_cpus = "1.16"
+
+[patch.crates-io]
+petgraph = { git = "https://github.com/Saethox/petgraph", branch = "fix-imports" }
+mahf = { git = "https://github.com/mahf-opt/mahf", branch = "grahf-additions" }
+
+[workspace]
+members = [
+    "hm-ibf-hao"
+]

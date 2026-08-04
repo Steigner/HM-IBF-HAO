@@ -1,0 +1,46 @@
+# Tooling configuration for the Python parts of the workspace.
+# The Rust crates are configured in Cargo.toml and rustfmt.toml.
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["target", ".direnv", "result"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # import sorting
+    "B",    # bugbear
+    "UP",   # pyupgrade
+    "C4",   # comprehensions
+    "SIM",  # simplifications
+    "RET",  # return statements
+    "PTH",  # prefer pathlib
+    "ARG",  # unused arguments
+    "D",    # docstrings
+]
+ignore = [
+    "D203",  # conflicts with D211 (no blank line before class docstring)
+    "D213",  # conflicts with D212 (summary on the first line)
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+# Tests document themselves through their names and are exempt from the docstring rules
+# that apply to the production modules.
+"hm-ibf-hao/tests/**" = ["D100", "D103", "D104"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["hm-ibf-hao/tests"]
+# The scripts are plain packages rather than an installed distribution, so the crate
+# directory has to be importable for `import preprocessing`.
+pythonpath = ["hm-ibf-hao"]
+addopts = "-q --strict-markers"
