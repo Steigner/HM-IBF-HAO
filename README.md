@@ -147,6 +147,7 @@ run.sh, run.bat          host entry point (shell, verify, smoke, arbitrary comma
 scripts/hm-ibf-entrypoint.sh   installed as `hm-ibf` on PATH inside the dev image
 scripts/verify.sh        the verification gate
 scripts/smoke.sh         the end-to-end smoke gate
+llms.txt                 curated repository map for LLMs and coding agents
 .claude/skills/          agent skills; `hm-ibf-audit` classifies a tree against HM-IBF,
                          `hm-ibf-retarget` maps the edits to swap in another problem
 ```
