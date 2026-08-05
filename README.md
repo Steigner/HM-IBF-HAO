@@ -1,6 +1,8 @@
 # HM-IBF-HAO
 
-A hyper-heuristic that **designs** island-model metaheuristics, and a horizontal alignment
+This repository presents an implementation of Homogenous Migration - Island Based Framework for the Horizontal Alignment Problem using the GRAHF framework's core. It serves as inspiration or a foundation for your own extensions to the variable-dimension problem. The SKILL hm-ibf-retarget is designed for these purposes.
+
+In short: A hyper-heuristic that **designs** island-model metaheuristics, and a horizontal alignment
 benchmark to design them for.
 
 The workspace holds two crates:
