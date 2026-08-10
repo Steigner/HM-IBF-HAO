@@ -37,7 +37,7 @@ Docker engine and `git` — that's all you need on the host. Clone the repositor
 there on, everything runs inside the container built from `Dockerfile`, never on the host:
 
 ```bash
-git clone https://github.com/Steigner/HM-IBF-HAO.git
+git clone https://anonymous.4open.science/r/HM-IBF-HAO
 cd HM-IBF-HAO
 ```
 

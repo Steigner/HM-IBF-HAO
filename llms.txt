@@ -8,38 +8,38 @@ Execution is Docker-only. `./run.sh` (macOS/Linux/Git Bash) or `.\run.bat` (Powe
 
 ## Docs
 
-- [README](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/README.md): project overview, requirements, the three pipeline stages, repository layout, retargeting to another problem (~2k tokens)
-- [Benchmark design](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/hm-ibf-hao/README.md): the HAO problem and objective function, island node-weight encoding, why PSO is excluded, the heterogeneous migration transform, instance and output schemas (~2k tokens)
-- [Runbook](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/hm-ibf-hao/runbook.md): operational detail per stage, every CLI flag with its default, tuning parameters, verification, smoke test, troubleshooting (~4k tokens)
-- [AGENTS.md](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/AGENTS.md): the contributor and coding-agent contract — Docker-only execution, Google-style doc comments, test layout, 500-line file limit, verification gate, plus a full project guide for agents (~7k tokens)
+- [README](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/README.md): project overview, requirements, the three pipeline stages, repository layout, retargeting to another problem (~2k tokens)
+- [Benchmark design](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/hm-ibf-hao/README.md): the HAO problem and objective function, island node-weight encoding, why PSO is excluded, the heterogeneous migration transform, instance and output schemas (~2k tokens)
+- [Runbook](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/hm-ibf-hao/runbook.md): operational detail per stage, every CLI flag with its default, tuning parameters, verification, smoke test, troubleshooting (~4k tokens)
+- [AGENTS.md](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/AGENTS.md): the contributor and coding-agent contract — Docker-only execution, Google-style doc comments, test layout, 500-line file limit, verification gate, plus a full project guide for agents (~7k tokens)
 
 ## Configuration
 
-- [params_training.conf](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/params_training.conf): TOML tuning parameters of the `train`/`pipeline` stage, including `dimensions_allowed` and the shared `max_evaluations` budget
-- [params_evaluation.conf](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/params_evaluation.conf): TOML tuning parameters of the `evaluate`/`pipeline` stage
-- [Dockerfile](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/Dockerfile): the single sanctioned execution environment; multi-stage, non-root, `dev` and `dev-nix` targets
-- [flake.nix](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/flake.nix): Nix devshell providing R/IRACE for the training stage
-- [Cargo.toml](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/Cargo.toml): workspace manifest and Rust dependencies
-- [pyproject.toml](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/pyproject.toml): `ruff` and `pytest` configuration for the Python side
+- [params_training.conf](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/params_training.conf): TOML tuning parameters of the `train`/`pipeline` stage, including `dimensions_allowed` and the shared `max_evaluations` budget
+- [params_evaluation.conf](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/params_evaluation.conf): TOML tuning parameters of the `evaluate`/`pipeline` stage
+- [Dockerfile](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/Dockerfile): the single sanctioned execution environment; multi-stage, non-root, `dev` and `dev-nix` targets
+- [flake.nix](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/flake.nix): Nix devshell providing R/IRACE for the training stage
+- [Cargo.toml](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/Cargo.toml): workspace manifest and Rust dependencies
+- [pyproject.toml](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/pyproject.toml): `ruff` and `pytest` configuration for the Python side
 
 ## Source
 
-- [src/](https://github.com/Steigner/HM-IBF-HAO/tree/main/src): the `grahf` framework — graph operators, island executor, migration transform trait, the algorithm-design problem and its IRACE tuning
-- [hm-ibf-hao/src/](https://github.com/Steigner/HM-IBF-HAO/tree/main/hm-ibf-hao/src): the `grahf-hao` library and `hm-ibf` binary — CLI, config loading, training, evaluation, the alignment problem, the clothoid spline, island and migration builders
-- [hm-ibf-hao/preprocessing/](https://github.com/Steigner/HM-IBF-HAO/tree/main/hm-ibf-hao/preprocessing): the Python instance generator — A\* routing, Douglas-Peucker simplification, backbone resampling, dimension recommendation, map catalog and heightmap download
-- [hm-ibf-hao/instances/](https://github.com/Steigner/HM-IBF-HAO/tree/main/hm-ibf-hao/instances): the three checked-in benchmark instances (Italy, Slovenia, Austria) as `_config.json` + `_heightmap.npy` pairs
-- [scripts/](https://github.com/Steigner/HM-IBF-HAO/tree/main/scripts): the in-container `hm-ibf` shim, the verification gate and the end-to-end smoke gate
+- [src/](https://github.com/anonymous.4open.science/HM-IBF-HAO/tree/main/src): the `grahf` framework — graph operators, island executor, migration transform trait, the algorithm-design problem and its IRACE tuning
+- [hm-ibf-hao/src/](https://github.com/anonymous.4open.science/HM-IBF-HAO/tree/main/hm-ibf-hao/src): the `grahf-hao` library and `hm-ibf` binary — CLI, config loading, training, evaluation, the alignment problem, the clothoid spline, island and migration builders
+- [hm-ibf-hao/preprocessing/](https://github.com/anonymous.4open.science/HM-IBF-HAO/tree/main/hm-ibf-hao/preprocessing): the Python instance generator — A\* routing, Douglas-Peucker simplification, backbone resampling, dimension recommendation, map catalog and heightmap download
+- [hm-ibf-hao/instances/](https://github.com/anonymous.4open.science/HM-IBF-HAO/tree/main/hm-ibf-hao/instances): the three checked-in benchmark instances (Italy, Slovenia, Austria) as `_config.json` + `_heightmap.npy` pairs
+- [scripts/](https://github.com/anonymous.4open.science/HM-IBF-HAO/tree/main/scripts): the in-container `hm-ibf` shim, the verification gate and the end-to-end smoke gate
 
 ## Agent skills
 
-- [hm-ibf-audit](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/.claude/skills/hm-ibf-audit/SKILL.md): classifies any source tree against the HM-IBF definition and reports where it deviates (~3k tokens)
-- [hm-ibf-retarget](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/.claude/skills/hm-ibf-retarget/SKILL.md): the ordered edit surface for swapping in another optimization problem, with a domain fit test and a `--check` pass for leftover alignment assumptions (~3k tokens)
+- [hm-ibf-audit](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/.claude/skills/hm-ibf-audit/SKILL.md): classifies any source tree against the HM-IBF definition and reports where it deviates (~3k tokens)
+- [hm-ibf-retarget](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/.claude/skills/hm-ibf-retarget/SKILL.md): the ordered edit surface for swapping in another optimization problem, with a domain fit test and a `--check` pass for leftover alignment assumptions (~3k tokens)
 
 ## Optional
 
-- [LICENSE](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/LICENSE): GNU General Public License v3.0 or later, full text
-- [agent-permissions.json](https://raw.githubusercontent.com/Steigner/HM-IBF-HAO/main/agent-permissions.json): declared automated-access and execution policy for this repository
-- [Rust integration tests](https://github.com/Steigner/HM-IBF-HAO/tree/main/hm-ibf-hao/tests): pipeline and smoke tests, plus the pytest unit and integration suites
-- [HorizAligns-Hybrid-Optimization](https://github.com/Steigner/HorizAligns-Hybrid-Optimization): upstream repository supplying the three benchmark heightmaps and their published endpoints
+- [LICENSE](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/LICENSE): GNU General Public License v3.0 or later, full text
+- [agent-permissions.json](https://raw.githubusercontent.com/anonymous.4open.science/HM-IBF-HAO/main/agent-permissions.json): declared automated-access and execution policy for this repository
+- [Rust integration tests](https://github.com/anonymous.4open.science/HM-IBF-HAO/tree/main/hm-ibf-hao/tests): pipeline and smoke tests, plus the pytest unit and integration suites
+- [HorizAligns-Hybrid-Optimization](https://github.com/anonymous.4open.science/HorizAligns-Hybrid-Optimization): upstream repository supplying the three benchmark heightmaps and their published endpoints
 - [MAHF](https://github.com/mahf-opt/mahf): the metaheuristics framework `grahf` builds on
 - [irace-rs](https://github.com/Saethox/irace-rs): the Rust bindings to IRACE used for parameter tuning
